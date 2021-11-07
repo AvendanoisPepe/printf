@@ -11,8 +11,7 @@ int _printf(const char *format, ...);
  * struct main - Struct op
  *
  * @moduladores: The operator
- * @modul_t: The function associated
- * funt: Funcion a punteros.
+ * @funt: Funcion a punteros.
  */
 typedef struct main
 {
