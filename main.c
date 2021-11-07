@@ -2,6 +2,7 @@
 #define HEADER_FILE
 
 #include <stdarg.h>
+#include <stdio.h>
 
 int _putchar(char c);
 int _printf(const char *format, ...);
@@ -18,4 +19,8 @@ typedef struct main
     int (*funt)(va_list, int);
 } modul;
 
+int printfc(va_list, int);
+int printfs(va_list, int);
+int printfd(va_list, int);
+int printfi(va_list, int);
 #endif
