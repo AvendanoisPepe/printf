@@ -18,7 +18,7 @@ int (*get_op_func(char s))(va_list, int)
     };
 
     int iterador;
-    for (iterador = 0; valid[iterador].moduladores; iterador++)
+    for (iterador = 0; valid[iterador].moduladores != NULL; iterador++)
     {
         if (strcmp(valid[iterador].moduladores, s) == 0)
         return (valid[iterador].funt);
