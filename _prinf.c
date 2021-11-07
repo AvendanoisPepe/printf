@@ -19,12 +19,12 @@ int _printf(const char * const format, ...)
 		return (-1);
 	iterador = 0;
 	guardarT = 0;
-	printf("%c", format[iterador]);
 
 	while (format[iterador]) /*El ciclo se terminara hasta el limite de format*/
 	{
-		if (format[iterador] == '%') /*Comparamos si la primera posicion es %*/
+		if (format[iterador] == '%') /*Comparamos si la posicion iterador es %*/
 		{
+			iterador++;
 			if (format[iterador] == '\0') /*Comparamos que la posicion no sea nula*/
 				return (-1);
 			if (format[iterador] == '%') /*Aca iteramos dos veces verificando*/
@@ -33,7 +33,7 @@ int _printf(const char * const format, ...)
 				iterador++;
 				continue;
 			aotros = get_op_func(format[iterador]); /*Enviamos el*/
-			/*caracter por medio de nuestra funcion a puntero*/
+			/*caracter por medio de nuestra  puntero a funcion*/
 			if (aotros != NULL) /*Verificamos q la siguiente posicion a % no sea nula*/
 				guardarT = aotros(lista, guardarT);
 				/*Enviamosa nuestra funcion si el puntero no es nulo*/
