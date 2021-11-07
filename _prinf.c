@@ -29,22 +29,28 @@ int _printf(const char * const format, ...)
 				return (-1);
 			if (format[iterador] == '%') /*Aca iteramos dos veces verificando*/
 			/*si % se repite despues del mismo*/
+			{ 
 				guardarT = guardarT + _putchar(format[iterador]);
 				iterador++;
 				continue;
+			}
 			aotros = get_op_func(format[iterador]); /*Enviamos el*/
 			/*caracter por medio de nuestra  puntero a funcion*/
 			if (aotros != NULL) /*Verificamos q la siguiente posicion a % no sea nula*/
 				guardarT = aotros(lista, guardarT);
 				/*Enviamosa nuestra funcion si el puntero no es nulo*/
 			else/*si es nula restamos la iteracion(1) ya reservadas*/
+			{ 
 				guardarT = guardarT + _putchar(format[iterador - 1]);
 				guardarT = guardarT + _putchar(format[iterador]);
+			}
 			iterador++;
 		}
 		else /* Si no es % entonces es un caracter entonces hace lo siguiente*/
+		{ 
 			guardarT = guardarT + _putchar(format[iterador]);
 			iterador++;
+		}
 	}
 	va_end(lista);
 	return (guardarT);
