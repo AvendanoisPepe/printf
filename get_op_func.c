@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 #include <stdarg.h>
 #include <string.h>
 /**
@@ -8,21 +8,19 @@
  */
 int (*get_op_func(char s))(va_list, int)
 {
-	modul valid[] = 
-    {
-        {"c", printfc},
-        {"s", printfs},
-        {"d", printfd},
-        {"i", printfi},
-        {NULL, NULL}
-    };
+	modul_t valid[] = {
+		{"c", printfc},
+		{"s", printfs},
+		{"d", printfd},
+		{NULL, NULL}
+	};
 
-    int iterador;
-    for (iterador = 0; valid[iterador].moduladores != NULL; iterador++)
-    {
-        if (strcmp(valid[iterador].moduladores, s) == 0)
-        return (valid[iterador].funt);
-    }
-    return (NULL);
+	int iterador;
 
+	for (iterador = 0; valid[iterador].moduladores != NULL; iterador++)
+	{
+		if (strcmp(valid[iterador].moduladores, &s) == 0)
+		return (valid[iterador].funt);
+		}
+	return (NULL);
 }

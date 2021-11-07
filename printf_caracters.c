@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 /**
  * printfc: la funcion lo que hace es imprimir un caracter de salida 
  * @lista: lista de argumentos 
@@ -24,7 +24,7 @@ int printfs(va_list lista, int guar)
 	{
 	  st = "(Null)";
 	}
-	while(*st != NULL)
+	while(*st)
 	{
 		guar  = guar + _putchar(*st++);
 	}
