@@ -42,7 +42,7 @@ int printfd(va_list lista, int guar)
 		_putchar('-');
 		while (i >= 0)
 		{
-			guar = guar + _putchar(aun[i] + '0');
+			guar = _putchar(aun[i] + '0');
 			i--;
 		}
 		return (guar);
