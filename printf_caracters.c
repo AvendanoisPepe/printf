@@ -24,7 +24,7 @@ int printfs(va_list lista, int guar)
 
 	if (st == NULL)
 	{
-		st = "(Null)";
+		st = "(null)";
 	}
 	while (*st)
 	{
