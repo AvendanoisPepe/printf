@@ -22,7 +22,7 @@ typedef struct main
 int printfc(va_list, int);
 int printfs(va_list, int);
 int printfd(va_list, int);
-int printfi(va_list, int);
+int printfd(va_list, int);
 int (*get_op_func(char s))(va_list, int);
 
 #endif
