@@ -9,17 +9,14 @@
 int _printf(const char *const format, ...)
 {
 	va_list lista; /*Creamos la litsa*/
-	int iterador;
-	int guardarT;
+	int iterador, guardarT;
 	int (*aotros)(va_list, int); /*Creamos una funcion a puntero*/
 
 	va_start(lista, format); /*Inicializamos la lista en la primera posicion*/
-
 	if (format == NULL) /*Se verifica que no llegue vacia el format*/
 		return (-1);
 	iterador = 0;
 	guardarT = 0;
-
 	while (format[iterador]) /*El ciclo se terminara hasta el limite de format*/
 	{
 		if (format[iterador] == '%') /*Comparamos si la posicion iterador es %*/
@@ -33,11 +30,9 @@ int _printf(const char *const format, ...)
 				iterador++;
 				continue;
 			}
-			aotros = get_op_func(format[iterador]); /*Enviamos el*/
-			/*caracter por medio de nuestra  puntero a funcion*/
+			aotros = get_op_func(format[iterador]);
 			if (aotros != NULL) /*Verificamos q la siguiente posicion a % no sea nula*/
 				guardarT = aotros(lista, guardarT);
-			/*Enviamosa nuestra funcion si el puntero no es nulo*/
 			else
 			{
 				guardarT = guardarT + _putchar(format[iterador - 1]);
