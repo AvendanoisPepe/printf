@@ -12,16 +12,14 @@ int (*get_op_func(char s))(va_list, int)
 		{"c", printfc},
 		{"s", printfs},
 		{"d", printfd},
-		{"i", printfd},
-		{NULL, NULL}
-	};
+		{NULL, NULL}};
 
 	int iterador;
 
 	for (iterador = 0; valid[iterador].moduladores != NULL; iterador++)
 	{
 		if (strcmp(valid[iterador].moduladores, &s) == 0)
-		return (valid[iterador].funt);
-		}
+			return (valid[iterador].funt);
+	}
 	return (NULL);
 }

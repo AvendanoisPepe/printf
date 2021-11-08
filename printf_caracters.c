@@ -5,10 +5,10 @@
  * @guar: longitud de cadena 
  * Return : guar 
  */
-int printfc(va_list lista, int guar) 
+int printfc(va_list lista, int guar)
 {
 	char ca = va_arg(lista, int);
-	guar = guar +_putchar(ca);
+	guar = guar + _putchar(ca);
 	return (guar);
 }
 /**
@@ -19,17 +19,14 @@ int printfc(va_list lista, int guar)
  */
 int printfs(va_list lista, int guar)
 {
-	char *st = va_arg(lista, char *); 
+	char *st = va_arg(lista, char *);
 	if (st == NULL)
 	{
-	  st = "(Null)";
+		st = "(Null)";
 	}
-	while(*st)
+	while (*st)
 	{
-		guar  = guar + _putchar(*st++);
+		guar = guar + _putchar(*st++);
 	}
 	return (guar);
-
 }
-
-
