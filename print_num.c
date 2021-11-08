@@ -33,20 +33,26 @@ int printfd(va_list lista, int guar)
 	else
 	{
 		int pepe;
-		while (numerito < 0)
+		if (numerito == 0)
 		{
-			digito = (numerito * -1) % 10;
-			aun[i] = digito;
-			i++;
-			numerito = numerito / 10;
+			return (-0);
 		}
-		i--;
-		pepe = _putchar('-');
-		while (i >= 0)
-		{
-			guar = guar + _putchar(aun[i] + '0');
+		else{
+			while (numerito < 0)
+			{
+				digito = (numerito * -1) % 10;
+				aun[i] = digito;
+				i++;
+				numerito = numerito / 10;
+			}
 			i--;
+			pepe = _putchar('-');
+			while (i >= 0)
+			{
+				guar = guar + _putchar(aun[i] + '0');
+				i--;
+			}
+			return (pepe + guar);
 		}
-		return (pepe + guar);
 	}
 }
