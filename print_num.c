@@ -39,10 +39,10 @@ int printfd(va_list lista, int guar)
 			numerito = numerito / 10;
 		}
 		i--;
-		_putchar('-');
+		guar = _putchar('-');
 		while (i >= 0)
 		{
-			guar = _putchar(aun[i] + '0');
+			guar = guar + _putchar(aun[i] + '0');
 			i--;
 		}
 		return (guar);
