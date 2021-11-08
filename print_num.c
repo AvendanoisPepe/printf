@@ -35,9 +35,9 @@ int printfd(va_list lista, int guar)
 		int pepe;
 		if (numerito == 0)
 		{
-			pepe = _putchar('-');
-			guar = pepe +_putchar('0');
-			return (guar);
+			pepe = _putchar('0');
+			/**guar = pepe +_putchar('0');*/
+			return (pepe);
 		}
 		else{
 			while (numerito < 0)
