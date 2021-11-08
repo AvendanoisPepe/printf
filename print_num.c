@@ -1,31 +1,51 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * 
- * 
+ * printfd - Nos imprime los numeros tanto - como +;
+ *  @lista:Lista de argumentos.
+ *  @guar:longitud de cadena.
+ * Return: guar;
  */
 int printfd(va_list lista, int guar)
 {
-	int numerito;
-	int digito;
+	int numerito, digito;
 	int aun[20];
 	int i = 0;
 
 	numerito = va_arg(lista, int);
-
-	while (numerito > 0)
+	if (numerito > 0)
 	{
-		digito = numerito % 10;
-		guar = guar + 1;
-		aun[i] = digito;
-		i++;
-		numerito = numerito / 10;
-	}
-	i--;
-	while (i >= 0)
-	{
-		guar = guar + _putchar(aun[i] + '0');
+		while (numerito > 0)
+		{
+			digito = numerito % 10;
+			aun[i] = digito;
+			i++;
+			numerito = numerito / 10;
+		}
 		i--;
+		while (i >= 0)
+		{
+			guar = guar + _putchar(aun[i] + '0');
+			i--;
+		}
+	}
+	else
+	{
+		while (numerito < 0)
+		{
+			digito = (numerito * -1) % 10;
+			aun[i] = digito;
+			i++;
+			numerito = numerito / 10;
+		}
+		i--;
+		_putchar('-');
+		while (i >= 0)
+		{
+			guar = guar + _putchar(aun[i] + '0');
+			i--;
+		}
+		return (guar);
 	}
 	return (guar);
 }
-
