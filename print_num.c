@@ -39,6 +39,7 @@ int printfd(va_list lista, int guar)
 			return (pepe);
 		}
 		else{
+			pepe = _putchar('-');
 			while (numerito < 0)
 			{
 				digito = (numerito * -1) % 10;
@@ -47,7 +48,6 @@ int printfd(va_list lista, int guar)
 				numerito = numerito / 10;
 			}
 			i--;
-			pepe = _putchar('-');
 			while (i >= 0)
 			{
 				guar = guar + _putchar(aun[i] + '0');
