@@ -39,11 +39,9 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 
-	/*long int l = INT_MAX;
-	long int m = INT_MIN;
+	int l = INT_MAX;
+	int m = INT_MIN;
 
-	l += 1024;
-	m -= 1024;
 
 	_printf("%d\n", 1024);
 	printf("%d\n", 1024);
@@ -93,6 +91,6 @@ int main(void)
 	printf("%d\n", 10000);
 	_printf("%i\n", 10000);
 	printf("******************************************************");
-	printf("%i\n", 10000);*/
+	printf("%i\n", 10000);
 	return (0);
 }
