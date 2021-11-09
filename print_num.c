@@ -41,7 +41,7 @@ int printfd(va_list lista, int guar)
 		else{
 			while (numerito < 0)
 			{
-				digito = (numerito % 10) * -1;
+				digito = (numerito * -1) % 10;
 				aun[i] = digito;
 				i++;
 				numerito = numerito / 10;
