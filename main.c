@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	int len;
+	/*int len;
 	int len2;
 	unsigned int ui;
 	void *addr;
@@ -17,6 +17,7 @@ int main(void)
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
 	ui = (unsigned int)INT_MAX + 1024;
+	_printf("%d\n", INT_MIN);
 	addr = (void *)0x7ffe637541f0;
 	_printf("Length:[%d, %i]\n", len, len);
 	printf("Length:[%d, %i]\n", len2, len2);
@@ -38,5 +39,61 @@ int main(void)
 	len2 = printf("Percent:[%%]\n");
 	_printf("Len:[%d]\n", 0);
 	printf("Len:[%d]\n", 0);
+	*/
+	long int l = INT_MAX;
+	long int m = INT_MIN;
+
+	l += 1024;
+	m -= 1024;
+
+	_printf("%d\n", 1024);
+	printf("%d\n", 1024);
+	_printf("%d\n", -1024);
+	printf("%d\n", -1024);
+	_printf("%d\n", 0);
+	printf("%d\n", 0);
+	_printf("%d\n", INT_MAX);
+	printf("%d\n", INT_MAX);
+	_printf("%d\n", INT_MIN);
+	printf("%d\n", INT_MIN);
+	/*_printf("%d", l);
+	printf("%d", l);
+	_printf("%d", m);
+	printf("%d", m);*/
+	_printf("There is %d bytes in %d KB\n", 1024, 1);
+	printf("There is %d bytes in %d KB\n", 1024, 1);
+	_printf("%d - %d = %d\n", 1024, 2048, -1024);
+	printf("%d - %d = %d\n", 1024, 2048, -1024);
+	_printf("%d + %d = %d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	printf("%d + %d = %d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	_printf("%i\n", 1024);
+	printf("%i\n", 1024);
+	_printf("%i\n", -1024);
+	printf("%i\n", -1024);
+	_printf("%i\n", 0);
+	printf("%i\n", 0);
+	_printf("%i\n", INT_MAX);
+	printf("%i\n", INT_MAX);
+	_printf("%i\n", INT_MIN);
+	printf("%i\n", INT_MIN);
+	/*_printf("%i", l);
+	printf("%i", l);
+	_printf("%i", m);
+	printf("%i", m);*/
+	_printf("There is %i bytes in %i KB\n", 1024, 1);
+	printf("There is %i bytes in %i KB\n", 1024, 1);
+	_printf("%i - %i = %i\n", 1024, 2048, -1024);
+	printf("%i - %i = %i\n", 1024, 2048, -1024);
+	_printf("%i + %i = %i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	printf("%i + %i = %i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	_printf("%d == %i\n", 1024, 1024);
+	printf("%d == %i\n", 1024, 1024);
+	_printf("iddi%diddiiddi\n", 1024);
+	printf("iddi%diddiiddi\n", 1024);
+	_printf("%d\n", 10000);
+	printf("%d\n", 10000);
+	_printf("%i\n", 10000);
+	printf("******************************************************");
+	printf("%i\n", 10000);
 	return (0);
 }
