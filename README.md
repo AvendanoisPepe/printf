@@ -172,4 +172,3 @@ First, a flowchart was generated which contains data input, cycles, functions, s
 - Twitter: https://twitter.com/Sebastian_Aven
 
 🥲🥲🥲🥲🥲🥲🥲🥲🥲🥲🥲🥲🥲![](https://raw.githubusercontent.com/jbocane6/logos/main/holberton-logo.png)🥲🥲🥲🥲🥲🥲🥲🥲🥲🥲🥲🥲🥲
-
