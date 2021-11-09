@@ -40,9 +40,10 @@ int printfd(va_list lista, int guar)
 		}
 		else{
 			pepe = _putchar('-');
-			while (numerito < 0)
+			numerito = (numerito * -1);
+			while (numerito > 0)
 			{
-				digito = (numerito * -1) % 10;
+				digito = numerito % 10;
 				aun[i] = digito;
 				i++;
 				numerito = numerito / 10;
