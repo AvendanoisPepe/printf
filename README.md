@@ -155,7 +155,7 @@ A brief description of our .c files
 
 First, a flowchart was generated which contains data input, cycles, functions, structures and with which the logic was based to generate the source code of our function.
 
-![](https://scontent.fbog4-1.fna.fbcdn.net/v/t1.6435-9/254332961_3034570010141042_3954412956960711636_n.jpg?_nc_cat=104&_nc_rgb565=1&ccb=1-5&_nc_sid=730e14&_nc_ohc=hkfL1-gKdoIAX9JU3VS&_nc_ht=scontent.fbog4-1.fna&oh=e039cf27700ba37eb5f7e5eb81152e0c&oe=61B05F87)
+![](https://scontent.fbog4-2.fna.fbcdn.net/v/t1.6435-9/254972652_3035195720078471_8349072310618740594_n.jpg?_nc_cat=109&_nc_rgb565=1&ccb=1-5&_nc_sid=730e14&_nc_ohc=w-mJxWGRU_YAX_ZoUwZ&_nc_ht=scontent.fbog4-2.fna&oh=81ee698ddbb0f77f2739768c3d7891dc&oe=61AFE128)
 
 ## Authors: Carlos Andrés Pardo Rodríguez,
 
