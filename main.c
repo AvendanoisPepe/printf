@@ -14,6 +14,8 @@ int main(void)
 	unsigned int ui;
 	void *addr;
 
+	int l = INT_MAX;
+	int m = INT_MIN;
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
 	ui = (unsigned int)INT_MAX + 1024;
@@ -39,8 +41,7 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 
-	int l = INT_MAX;
-	int m = INT_MIN;
+	
 
 
 	_printf("%d\n", 1024);

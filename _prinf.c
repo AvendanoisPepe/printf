@@ -2,50 +2,50 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
-*_printf-Verificamos los % para ver si son seguidos, solos y mandarlos a su fun
- * @format:Cadena principal.
- * Return:guardarT.
+*_printf-We check the %'s to see if they are followed, single and send them to their fun
+ * @format:Main chain.
+ * Return:saveT.
  */
 int _printf(const char *const format, ...)
 {
-	va_list lista; /*Creamos la litsa*/
-	int iterador, guardarT;
-	int (*aotros)(va_list, int); /*Creamos una funcion a puntero*/
+	va_list ourList; /*We create a list.*/
+	int iterator, saveT;
+	int (*aotros)(va_list, int); /*We create a pointer function*/
 
-	va_start(lista, format); /*Inicializamos la lista en la primera posicion*/
-	if (format == NULL) /*Se verifica que no llegue vacia el format*/
+	va_start(ourList, format); /*We initialize ourList in the first position*/
+	if (format == NULL) /*It is verified that the format does not arrive empty.*/
 		return (-1);
-	iterador = 0;
-	guardarT = 0;
-	while (format[iterador]) /*El ciclo se terminara hasta el limite de format*/
+	iterator = 0;
+	saveT = 0;
+	while (format[iterator]) /*The cycle will be completed up to the format limit*/
 	{
-		if (format[iterador] == '%') /*Comparamos si la posicion iterador es %*/
+		if (format[iterator] == '%') /*We compare if the iterator position is %*/
 		{
-			iterador++;
-			if (format[iterador] == '\0') /*Comparamos que la posicion no sea nula*/
+			iterator++;
+			if (format[iterator] == '\0') /*We compare that the position is not null*/
 				return (-1);
-			if (format[iterador] == '%')
+			if (format[iterator] == '%')
 			{
-				guardarT = guardarT + _putchar(format[iterador]);
-				iterador++;
+				saveT = saveT + _putchar(format[iterator]);
+				iterator++;
 				continue;
 			}
-			aotros = get_op_func(format[iterador]);
-			if (aotros != NULL) /*Verificamos q la siguiente posicion a % no sea nula*/
-				guardarT = aotros(lista, guardarT);
+			aotros = get_op_func(format[iterator]);
+			if (aotros != NULL) /*We verify that the following position a % is not null*/
+				saveT = aotros(ourList, saveT);
 			else
 			{
-				guardarT = guardarT + _putchar(format[iterador - 1]);
-				guardarT = guardarT + _putchar(format[iterador]);
+				saveT = saveT + _putchar(format[iterator - 1]);
+				saveT = saveT + _putchar(format[iterator]);
 			}
-			iterador++;
+			iterator++;
 		}
 		else
 		{
-			guardarT = guardarT + _putchar(format[iterador]);
-			iterador++;
+			saveT = saveT + _putchar(format[iterator]);
+			iterator++;
 		}
 	}
-	va_end(lista);
-	return (guardarT);
+	va_end(ourList);
+	return (saveT);
 }

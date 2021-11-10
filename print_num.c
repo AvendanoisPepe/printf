@@ -1,26 +1,26 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * printfd - Nos imprime los numeros tanto - como +;
- *  @lista:Lista de argumentos.
- *  @guar:longitud de cadena.
+ * printfd - It prints both - and + numbers;
+ *  @ourList:List of arguments.
+ *  @guar:chain length.
  * Return: guar;
  */
-int printfd(va_list lista, int guar)
+int printfd(va_list ourList, int guar)
 {
-	int numerito, digito;
+	int smallNumber, dig;
 	int aun[20];
 	int i = 0;
 
-	numerito = va_arg(lista, int);
-	if (numerito > 0)
+	smallNumber = va_arg(ourList, int);
+	if (smallNumber > 0)
 	{
-		while (numerito > 0)
+		while (smallNumber > 0)
 		{
-			digito = numerito % 10;
-			aun[i] = digito;
+			dig = smallNumber % 10;
+			aun[i] = dig;
 			i++;
-			numerito = numerito / 10;
+			smallNumber = smallNumber / 10;
 		}
 		i--;
 		while (i >= 0)
@@ -32,29 +32,29 @@ int printfd(va_list lista, int guar)
 	}
 	else
 	{
-		int pepe;
-		if (numerito == 0)
+		int failure;
+		if (smallNumber == 0)
 		{
-			pepe = _putchar('0');
-			return (pepe);
+			failure = _putchar('0');
+			return (failure);
 		}
 		else
 		{
-			while (numerito < 0)
+			while (smallNumber < 0)
 			{
-				digito = (numerito % 10) * -1;
-				aun[i] = digito;
+				dig = (smallNumber % 10) * -1;
+				aun[i] = dig;
 				i++;
-				numerito = numerito / 10;
+				smallNumber = smallNumber / 10;
 			}
 			i--;
-			pepe = _putchar('-');
+			failure = _putchar('-');
 			while (i >= 0)
 			{
 				guar = guar + _putchar(aun[i] + '0');
 				i--;
 			}
-			return (pepe + guar);
+			return (failure + guar);
 		}
 	}
 }

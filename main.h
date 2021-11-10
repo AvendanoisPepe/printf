@@ -15,7 +15,7 @@ int _printf(const char *format, ...);
  */
 typedef struct main
 {
-	char *moduladores;
+	char *modull;
 	int (*funt)(va_list, int);
 } modul_t;
 

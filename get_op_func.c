@@ -15,13 +15,13 @@ int (*get_op_func(char s))(va_list, int)
 		{"i", printfd},
 		{NULL, NULL}};
 
-	int iterador;
+	int iterator;
 
-	for (iterador = 0; valid[iterador].moduladores != NULL; iterador++)
+	for (iterator = 0; valid[iterator].modull != NULL; iterator++)
 	{
-		if (*(valid[iterador].moduladores) == s)
+		if (*(valid[iterator].modull) == s)
 		{
-			return (valid[iterador].funt);
+			return (valid[iterator].funt);
 		}
 	}
 	return (NULL);
