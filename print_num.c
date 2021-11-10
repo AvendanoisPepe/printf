@@ -38,10 +38,11 @@ int printfd(va_list lista, int guar)
 			pepe = _putchar('0');
 			return (pepe);
 		}
-		else{
+		else
+		{
 			while (numerito < 0)
 			{
-				digito = (numerito * -1) % 10;
+				digito = (numerito % 10) * -1;
 				aun[i] = digito;
 				i++;
 				numerito = numerito / 10;
